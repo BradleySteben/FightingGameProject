@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ControlCharacters : MonoBehaviour
 {
+
+    private Animator animator;
+
     //Key to denying other moves or other stuff
     private bool canAct = false;
     private bool onGround = true;
+    private bool isWalking = false;
     private bool blocking = false;
 
     [SerializeField]
@@ -23,9 +27,14 @@ public class ControlCharacters : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.D)){
             transform.position = transform.position + new Vector3(speed,0,0) * Time.deltaTime;
+            animator.SetBool("isWalking", true);
         }
         if(Input.GetKey(KeyCode.A)){
             transform.position = transform.position - new Vector3(speed,0,0) * Time.deltaTime;
+            animator.SetBool("isWalking", true);
+        }
+        if(!(Input.GetKey(KeyCode.D)) && (Input.GetKey(KeyCode.A))){
+            animator.SetBool("isWalking", false);
         }
     }
 
