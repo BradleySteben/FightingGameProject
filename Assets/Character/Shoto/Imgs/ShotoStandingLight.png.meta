@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 6524578096004845927
     second: ShotoStandingLight_5
+  - first:
+      213: -7648532272845500939
+    second: ShotoStandingLight_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,7 +119,7 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -137,7 +140,7 @@ TextureImporter:
         y: 128
         width: 64
         height: 64
-      alignment: 0
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -154,11 +157,11 @@ TextureImporter:
       name: ShotoStandingLight_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 128
+        y: 128
         width: 64
         height: 64
-      alignment: 0
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -175,11 +178,11 @@ TextureImporter:
       name: ShotoStandingLight_3
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 64
         width: 64
         height: 64
-      alignment: 0
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -196,11 +199,11 @@ TextureImporter:
       name: ShotoStandingLight_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 64
+        y: 64
         width: 64
         height: 64
-      alignment: 0
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -217,11 +220,11 @@ TextureImporter:
       name: ShotoStandingLight_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 128
+        y: 64
         width: 64
         height: 64
-      alignment: 0
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -230,6 +233,27 @@ TextureImporter:
       bones: []
       spriteID: 761d9a9a535fb8a50800000000000000
       internalID: 6524578096004845927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShotoStandingLight_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdcee7eb64fad590800000000000000
+      internalID: -7648532272845500939
       vertices: []
       indices: 
       edges: []

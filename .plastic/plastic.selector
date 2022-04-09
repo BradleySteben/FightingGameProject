@@ -1,4 +1,0 @@
-repository "FightGame@Bradley@cloud"
-  path "/"
-    br "/main"
-    co "/main"

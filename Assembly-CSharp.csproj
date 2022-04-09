@@ -36,7 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ControlCharacters.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\ControlCharacters.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\EndAnimation.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\SideAttackShoto.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
