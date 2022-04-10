@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637834657139241336
+      ticks: 637851585688110843
     m_Hash: 3533921098
   m_LockFileStatus:
     m_FilePath: C:/Users/snadl/Downloads/school/Semester 4/GameDev/BeegProject/FightGame/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637834657232576408
+      ticks: 637851585688390900
     m_Hash: 2154246561
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
