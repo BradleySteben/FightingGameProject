@@ -5,9 +5,20 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    public int maxHealth = 100; 
-    public int currentHealth;
-    public HealthBar healthBar;
+    [SerializeField]
+    int maxHealth = 100;
+    [SerializeField]
+    int currentHealth;
+    [SerializeField]
+    HealthBar healthBar;
+
+    [SerializeField]
+    int dmgRate;
+    [SerializeField]
+    KeyCode key;
+    [SerializeField]
+    Rigidbody2D rb2d;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +31,13 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) )
+        if (Input.GetKeyDown(key) )
         {
-            TakeDamage(20);
+            TakeDamage(dmgRate);
+        }
+        if(currentHealth == 0)
+        {
+            Debug.Log(healthBar.name + " has lost");
         }
     }
     void TakeDamage(int damage)
