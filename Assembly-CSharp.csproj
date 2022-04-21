@@ -42,7 +42,8 @@
      <Compile Include="Assets\Scripts\MainMenuBehaviour.cs" />
      <Compile Include="Assets\HealthBars&amp;Timer\TimerCountdown.cs" />
      <Compile Include="Assets\Character\Shoto\Scripts\EndAnimation.cs" />
-     <Compile Include="Assets\Character\Shoto\Scripts\SideAttackShoto.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\Blocking.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\EndBlock.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -648,6 +649,9 @@
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
         <HintPath>C:\Users\snadl\Downloads\school\Semester 4\GameDev\BeegProject\FightGame\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.quicksearch">
+        <HintPath>C:\Users\snadl\Downloads\school\Semester 4\GameDev\BeegProject\FightGame\Library\ScriptAssemblies\com.unity.quicksearch.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
         <HintPath>C:\Users\snadl\Downloads\school\Semester 4\GameDev\BeegProject\FightGame\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>

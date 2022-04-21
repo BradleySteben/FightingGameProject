@@ -84,6 +84,9 @@ public class ControlCharacters : MonoBehaviour
             else if(Input.GetKeyDown(KeyCode.P)){
                 UniqueAttack();
             }
+            else if(Input.GetKeyDown(KeyCode.I)){
+                Block();
+            }
         }
     }
 
@@ -94,10 +97,15 @@ public class ControlCharacters : MonoBehaviour
         //not is set in behavior scripts per action
     }
     void UniqueAttack(){
-        //animator.SetBool("uniqueAttack", true);
-        //animator.SetBool("canAct", false);
+        animator.SetBool("uniqueAttack", true);
+        animator.SetBool("canAct", false);
         //Whether the character can move or 
         //not is set in behavior scripts per action
+    }
+
+    void Block(){
+        animator.SetBool("block", true);
+        animator.SetBool("canAct", false);
     }
 
     void Jump(){
