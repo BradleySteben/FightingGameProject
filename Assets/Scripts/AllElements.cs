@@ -17,7 +17,10 @@ public class AllElements : MonoBehaviour
     [SerializeField]
     int dmgRate;
     [SerializeField]
-    KeyCode key1, key2;
+    Rigidbody2D player1, player2;
+
+    Collider2D player1Collider, player2Collider;
+    //KeyCode key1, key2;
 
     [SerializeField]
     Canvas results, pause;
@@ -30,6 +33,9 @@ public class AllElements : MonoBehaviour
         currentTime = startingTime;
         results.enabled = false;
         pause.enabled = false;
+
+        player1Collider = player1.GetComponent<Collider2D>();
+        player2Collider = player2.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -43,14 +49,14 @@ public class AllElements : MonoBehaviour
             currentTime = 0;
         }
 
-        if (Input.GetKeyDown(key1))
-        {
-            healthBar1.TakeDamage(dmgRate);
-        }
-        if (Input.GetKeyDown(key2))
-        {
-            healthBar2.TakeDamage(dmgRate);
-        }
+        //if (Input.GetKeyDown(key1))
+        //{
+        //    healthBar1.TakeDamage(dmgRate);
+        //}
+        //if (Input.GetKeyDown(key2))
+        //{
+        //    healthBar2.TakeDamage(dmgRate);
+        //}
 
         if(healthBar1.getHealth() == 0)
         {
@@ -91,4 +97,22 @@ public class AllElements : MonoBehaviour
             }
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(player1Collider.tag == "Attacking" && player2Collider.tag != "Defending")
+        {
+            healthBar2.TakeDamage(dmgRate);
+        }
+
+        if (player2Collider.tag == "Attacking" && player1Collider.tag != "Defending")
+        {
+            healthBar1.TakeDamage(dmgRate);
+        }
+
+        //if (collision.collider.tag == "Attacking" && this.tag != "Defending")
+        //{
+        //    healthBar2.TakeDamage(dmgRate);
+        //}
+    }
 }
+
