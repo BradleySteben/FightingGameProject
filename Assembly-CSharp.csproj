@@ -45,6 +45,7 @@
      <Compile Include="Assets\Character\Shoto\Scripts\EndAnimation.cs" />
      <Compile Include="Assets\Character\Shoto\Scripts\Blocking.cs" />
      <Compile Include="Assets\Scripts\AllElements.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\Crouching.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
