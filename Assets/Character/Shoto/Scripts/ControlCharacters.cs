@@ -16,6 +16,9 @@ public class ControlCharacters : MonoBehaviour
     [SerializeField]
     float jump = 2.0f;
 
+    [SerializeField]
+    float tatsu = 2.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,14 +100,23 @@ public class ControlCharacters : MonoBehaviour
     }
 
     void LightAttack(){
+        if(animator.GetBool("isGrounded")){
         animator.SetBool("lightAttack", true);
         animator.SetBool("canAct", false);
         //Whether the character can move or 
         //not is set in behavior scripts per action
+        }
     }
     void UniqueAttack(){
         animator.SetBool("uniqueAttack", true);
         animator.SetBool("canAct", false);
+        
+        if(2 == animator.GetInteger("input")){
+            rb2d.AddForce(Vector3.right * tatsu * 100);
+        }
+        else if(4 == animator.GetInteger("input")){
+            rb2d.AddForce(Vector3.left * tatsu * 100);
+        }
         //Whether the character can move or 
         //not is set in behavior scripts per action
     }

@@ -16,6 +16,9 @@ public class Player2Control : MonoBehaviour
     [SerializeField]
     float jump = 2.0f;
 
+    [SerializeField]
+    float tatsu = 2.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,27 +87,36 @@ public class Player2Control : MonoBehaviour
                     animator.SetInteger("input", 0);
                     }
 
-            if(Input.GetKeyDown(KeyCode.O)){
+            if(Input.GetKeyDown(KeyCode.Comma)){
                 LightAttack();
             }
-            else if(Input.GetKeyDown(KeyCode.P)){
+            else if(Input.GetKeyDown(KeyCode.Period)){
                 UniqueAttack();
             }
-            else if(Input.GetKeyDown(KeyCode.I)){
+            else if(Input.GetKeyDown(KeyCode.M)){
                 Block();
             }
         }
     }
 
     void LightAttack(){
+        if(animator.GetBool("isGrounded")){
         animator.SetBool("lightAttack", true);
         animator.SetBool("canAct", false);
         //Whether the character can move or 
         //not is set in behavior scripts per action
+        }
     }
     void UniqueAttack(){
         animator.SetBool("uniqueAttack", true);
         animator.SetBool("canAct", false);
+        
+        if(2 == animator.GetInteger("input")){
+            rb2d.AddForce(Vector3.right * tatsu * 100);
+        }
+        else if(4 == animator.GetInteger("input")){
+            rb2d.AddForce(Vector3.left * tatsu * 100);
+        }
         //Whether the character can move or 
         //not is set in behavior scripts per action
     }

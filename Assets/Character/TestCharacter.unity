@@ -719,6 +719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shoto
       objectReference: {fileID: 0}
+    - target: {fileID: 2169659663979097206, guid: 13649bc568cca7843bbf072f9d882cb8, type: 3}
+      propertyPath: tatsu
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2169659663979097207, guid: 13649bc568cca7843bbf072f9d882cb8, type: 3}
       propertyPath: m_RootOrder
       value: 2
