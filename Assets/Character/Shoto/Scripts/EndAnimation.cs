@@ -8,5 +8,7 @@ public class EndAnimation : StateMachineBehaviour
         animator.SetBool("lightAttack", false);
         animator.SetBool("uniqueAttack", false);
         animator.SetBool("canAct", true);
+        animator.SetBool("jump", false);
+        animator.SetBool("isGrounded", true);
     }
 }

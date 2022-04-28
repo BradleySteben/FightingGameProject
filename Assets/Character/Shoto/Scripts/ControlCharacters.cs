@@ -6,16 +6,21 @@ public class ControlCharacters : MonoBehaviour
 {
 
     private Animator animator;
+    private Rigidbody2D rb2d;
 
     //Key to denying other moves or other stuff
 
     [SerializeField]
     float speed = 3.0f;
 
+    [SerializeField]
+    float jump = 2.0f;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -38,7 +43,10 @@ public class ControlCharacters : MonoBehaviour
                  animator.SetBool("crouch", false);
             }
 
-            if(Input.GetKey(KeyCode.W))
+            if(!animator.GetBool("crouch"))
+            {
+
+                if(Input.GetKeyDown(KeyCode.W))
             {
                 animator.SetInteger("input", 1);
 
@@ -46,9 +54,7 @@ public class ControlCharacters : MonoBehaviour
                     Jump();
                 }
             }
-
-            if(!animator.GetBool("crouch"))
-            {
+                
                 if(Input.GetKey(KeyCode.D))
                 {
                     animator.SetBool("isWalking", true);
@@ -109,6 +115,8 @@ public class ControlCharacters : MonoBehaviour
     }
 
     void Jump(){
-
+        animator.SetBool("jump", true);
+        animator.SetBool("isGrounded", false);
+        rb2d.AddForce(Vector3.up * jump * 100);
     }
 }
