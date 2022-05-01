@@ -19,15 +19,23 @@ public class ControlCharacters2 : MonoBehaviour
     [SerializeField]
     int UniqueDmg = 15;
 
-    private int hitDmg;
 
     private string tag;
+
+    [SerializeField]
+    HealthBar healthBar;
+
+    private int hitDmg;
+
+    private Rigidbody2D rb2d;
+
+    private Collider2D hitbox;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        tag = gameObject.tag;
+        tag = this.gameObject.tag;
         Debug.Log(gameObject.name +": "+ tag);
     }
 
@@ -93,17 +101,17 @@ public class ControlCharacters2 : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.O)){
                 LightAttack();
-                gameObject.tag = "Player";
+                this.gameObject.tag = "Player";
                 Debug.Log(gameObject.name + ": " + tag);
             }
             else if(Input.GetKeyDown(KeyCode.P)){
                 UniqueAttack();
-                gameObject.tag = "Player";
+                this.gameObject.tag = "Player";
                 Debug.Log(gameObject.name + ": " + tag);
             }
             else if(Input.GetKeyDown(KeyCode.I)){
                 Block();
-                gameObject.tag = "Player";
+                this.gameObject.tag = "Player";
                 Debug.Log(gameObject.name + ": " + tag);
             }
         }

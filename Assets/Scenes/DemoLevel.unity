@@ -925,6 +925,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702201837}
   m_CullTransparentMesh: 1
+--- !u!114 &813462090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5085684535812574779, guid: 7a62b2908ddda474286c32f6dc08fd04, type: 3}
+  m_PrefabInstance: {fileID: 954170528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &871853423
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  jump: 2
+  tatsu: 2.5
 --- !u!60 &871853425
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1124,6 +1137,7 @@ MonoBehaviour:
   speed: 3
   LightDmg: 10
   UniqueDmg: 15
+  healthBar: {fileID: 910836599}
 --- !u!1 &896014489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1641,7 @@ GameObject:
   - component: {fileID: 1156488944}
   - component: {fileID: 1156488943}
   - component: {fileID: 1156488942}
+  - component: {fileID: 1156488946}
   m_Layer: 0
   m_Name: Square Dummy
   m_TagString: Player
@@ -1746,6 +1761,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1156488946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156488941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641518ff7cf90584ba6e438bab28a138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 357180844}
+  hitDmg: 10
 --- !u!1 &1264389116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,14 +2169,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2062785592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb7c978420abd0c44ac5c5769a31d128, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cf05a4718cb79448816390b35acdc61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 0}
   optionsMenu: {fileID: 954170531}
   volumeSlider: {fileID: 954170529}
   mute: {fileID: 0}
-  startGameBtn: {fileID: 0}
+  returnBtn: {fileID: 813462090}
 --- !u!4 &2062785594
 Transform:
   m_ObjectHideFlags: 0
