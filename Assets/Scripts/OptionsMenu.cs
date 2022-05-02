@@ -34,12 +34,14 @@ public class OptionsMenu : MonoBehaviour
         {
             optionsMenu.enabled = true;
             isDisplayed = true;
+            Time.timeScale = 0;
 
         }
         else if (Input.GetKeyUp(KeyCode.Escape) && isDisplayed != false)
         {
             optionsMenu.enabled = false;
             isDisplayed = false;
+            Time.timeScale = 1;
         }
     }
 

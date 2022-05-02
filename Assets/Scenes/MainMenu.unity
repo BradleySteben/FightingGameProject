@@ -1013,7 +1013,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054059874}
-  - component: {fileID: 1054059873}
   - component: {fileID: 1054059875}
   m_Layer: 0
   m_Name: Canvases
@@ -1022,23 +1021,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1054059873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054059872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fae404bedbc5614aa85eb94126f8355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainMenu: {fileID: 1723562825}
-  optionsMenu: {fileID: 2139730601}
-  volumeSlider: {fileID: 1230765729}
-  mute: {fileID: 0}
-  startGameBtn: {fileID: 1888980915}
 --- !u!4 &1054059874
 Transform:
   m_ObjectHideFlags: 0
@@ -1070,7 +1052,6 @@ MonoBehaviour:
   mainMenu: {fileID: 1723562825}
   optionsMenu: {fileID: 2139730601}
   volumeSlider: {fileID: 1230765729}
-  mute: {fileID: 0}
   startGameBtn: {fileID: 1888980915}
 --- !u!1 &1117806033
 GameObject:
