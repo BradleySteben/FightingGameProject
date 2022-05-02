@@ -7,6 +7,7 @@ TagManager:
   - Return
   - Attacking
   - Defending
+  - Attack
   layers:
   - Default
   - TransparentFX

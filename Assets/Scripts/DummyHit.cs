@@ -29,7 +29,7 @@ public class DummyHit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.tag == "Attacking" && this.tag != "Defending")
+        if(collision.transform.tag == "Attack" && this.tag != "Defending")
         {
             Debug.Log(collision.transform.name + " is " + collision.transform.tag);
             Debug.Log(this.name + " is " + this.tag);

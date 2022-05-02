@@ -59,6 +59,7 @@
     <Compile Include="Assets\Character\Shoto\Scripts\ControlCharacters.cs" />
     <Compile Include="Assets\Scripts\MainMenuBehaviour.cs" />
     <Compile Include="Assets\Character\Shoto\Scripts\EndBlock.cs" />
+    <Compile Include="Assets\Scripts\OptionsMenu.cs" />
     <Compile Include="Assets\Character\Shoto\Scripts\Crouching.cs" />
     <Compile Include="Assets\HealthBars&amp;Timer\TimerCountdown.cs" />
     <Compile Include="Assets\Scripts\Blocking2.cs" />
@@ -70,7 +71,8 @@
     <Compile Include="Assets\Character\Shoto\Scripts\startJump.cs" />
     <Compile Include="Assets\Scripts\AllElements.cs" />
     <Compile Include="Assets\Scripts\DummyHit.cs" />
-    <Compile Include="Assets\Scripts\OptionsMenu.cs" />
+    <Compile Include="Assets\Attacks\LightAttack.cs" />
+    <Compile Include="Assets\Attacks\TatsuAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

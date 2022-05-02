@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Player2Control : MonoBehaviour
 {
-
     private Animator animator;
-    private Rigidbody2D rb2d;
 
     //Key to denying other moves or other stuff
 
@@ -19,11 +17,32 @@ public class Player2Control : MonoBehaviour
     [SerializeField]
     float tatsu = 2.5f;
 
+    [SerializeField]
+    HealthBar healthBar;
+
+    private int hitDmg;
+
+    private Rigidbody2D rb2d;
+
+    private Collider2D hitbox;
+
+    [SerializeField]
+    GameObject lightAttack, specialAttack;
+
+    [SerializeField]
+    Transform releaseRight, releaseLeft;
+
+    private bool isAttacking = false;
+    private bool isBlocking = false;
+
+    private bool facingRight = true;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        hitbox = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -95,6 +114,11 @@ public class Player2Control : MonoBehaviour
             }
             else if(Input.GetKeyDown(KeyCode.M)){
                 Block();
+                isBlocking = true;
+            }
+            else if (Input.GetKeyUp(KeyCode.M))
+            {
+                isBlocking = false;
             }
         }
     }
@@ -102,6 +126,7 @@ public class Player2Control : MonoBehaviour
     void LightAttack(){
         if(animator.GetBool("isGrounded")){
         animator.SetBool("lightAttack", true);
+            Instantiate(lightAttack, releaseRight.position, releaseRight.rotation);
         animator.SetBool("canAct", false);
         //Whether the character can move or 
         //not is set in behavior scripts per action
@@ -109,6 +134,8 @@ public class Player2Control : MonoBehaviour
     }
     void UniqueAttack(){
         animator.SetBool("uniqueAttack", true);
+            Instantiate(specialAttack, releaseRight.position, releaseRight.rotation);
+            Instantiate(specialAttack, releaseLeft.position, releaseLeft.rotation);
         animator.SetBool("canAct", false);
         
         if(2 == animator.GetInteger("input")){
@@ -130,5 +157,28 @@ public class Player2Control : MonoBehaviour
         animator.SetBool("jump", true);
         animator.SetBool("isGrounded", false);
         rb2d.AddForce(Vector3.up * jump * 100);
+    }
+    void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Attack" && isBlocking != true)
+        {
+            Debug.Log(collision.transform.name + " is " + collision.transform.tag);
+            //Debug.Log(this.name + " is " + this.tag);
+            if(collision.gameObject.name == "LightAttack(Clone)")
+            {
+                healthBar.TakeDamage(10);
+                Debug.Log(this.name + "took 10 damage");
+            }
+            else
+            {
+                healthBar.TakeDamage(15);
+                Debug.Log(this.name + "took 15 damage");
+            }
+        }
     }
 }

@@ -13,8 +13,8 @@ public class MainMenuBehaviour : MonoBehaviour
     [SerializeField]
     Slider volumeSlider;
 
-    [SerializeField]
-    Toggle mute;
+    //[SerializeField]
+    //Toggle mute;
 
     [SerializeField]
     Button startGameBtn;
@@ -45,18 +45,18 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public void ChangeVolume()
     {
-        if (mute.isOn)
-        {
-            AudioListener.volume = 0;
-        }
-        else
-        {
-            AudioListener.volume = volumeSlider.value;
-        }
+        //if (mute.isOn)
+        //{
+            //AudioListener.volume = 0;
+        //}
+        //else
+        //{
+            //AudioListener.volume = volumeSlider.value;
+        //}
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("DemoLevel");
+        SceneManager.LoadScene("IntroToFighting");
     }
 }
