@@ -122,8 +122,10 @@ public class Player2Control : MonoBehaviour
     }
 
     void Block(){
+        if(animator.GetBool("isGrounded")){
         animator.SetBool("block", true);
         animator.SetBool("canAct", false);
+        }
     }
 
     void Jump(){

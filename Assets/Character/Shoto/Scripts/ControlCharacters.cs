@@ -122,8 +122,10 @@ public class ControlCharacters : MonoBehaviour
     }
 
     void Block(){
+        if(animator.GetBool("isGrounded")){
         animator.SetBool("block", true);
         animator.SetBool("canAct", false);
+        }
     }
 
     void Jump(){

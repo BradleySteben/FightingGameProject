@@ -48,10 +48,11 @@
      <Compile Include="Assets\Scripts\EndAnimation2.cs" />
      <Compile Include="Assets\Character\Shoto\Scripts\EndAnimation.cs" />
      <Compile Include="Assets\Character\Shoto\Scripts\Blocking.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\Player2Control.cs" />
      <Compile Include="Assets\Scripts\EndBlock2.cs" />
      <Compile Include="Assets\Character\Shoto\Scripts\startJump.cs" />
      <Compile Include="Assets\Scripts\AllElements.cs" />
-     <Compile Include="Assets\Character\Shoto\Scripts\Player2Control.cs" />
+     <Compile Include="Assets\Character\Shoto\Scripts\Make2Appear.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
