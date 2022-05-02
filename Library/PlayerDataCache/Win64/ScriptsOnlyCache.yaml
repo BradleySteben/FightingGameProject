@@ -4,19 +4,22 @@ ScriptsOnlyBuild:
     - AllElements
     - Blocking
     - ControlCharacters
-    - ControlCharacters2
     - Crouching
+    - DummyHit
     - EndAnimation
     - EndBlock
     - HealthBar
-    - HealthController
+    - LightAttack
     - MainMenuBehaviour
-    - TimerCountdown
+    - OptionsMenu
+    - Player2Control
+    - TatsuAttack
     - startJump
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -36,10 +39,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -57,7 +58,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/DemoLevel.unity:
+    Assets/Scenes/IntroToFighting.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -91,8 +92,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1726}
-    - Class: 114
       Script: {instanceID: 1760}
     - Class: 114
       Script: {instanceID: 1772}
@@ -103,11 +102,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 2512}
-    - Class: 114
       Script: {instanceID: 2554}
-    - Class: 114
-      Script: {instanceID: 2682}
     - Class: 114
       Script: {instanceID: 2776}
     - Class: 114
@@ -117,23 +112,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 3158}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 3466}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 3598}
+      Script: {instanceID: 3600}
     - Class: 114
-      Script: {instanceID: 3920}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3998}
     - Class: 114
-      Script: {instanceID: 4072}
+      Script: {instanceID: 4074}
     - Class: 114
-      Script: {instanceID: 5560}
+      Script: {instanceID: 4854}
+    - Class: 114
+      Script: {instanceID: 5562}
     - Class: 114
       Script: {instanceID: 6082}
+    - Class: 114
+      Script: {instanceID: 6106}
+    - Class: 114
+      Script: {instanceID: 25042}
+    - Class: 114
+      Script: {instanceID: 29618}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -165,6 +168,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -178,6 +183,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1894}
     - Class: 114
+      Script: {instanceID: 2320}
+    - Class: 114
       Script: {instanceID: 2682}
     - Class: 114
       Script: {instanceID: 2776}
@@ -186,13 +193,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3466}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 3598}
+      Script: {instanceID: 3600}
     - Class: 114
-      Script: {instanceID: 3920}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 17976}
+      Script: {instanceID: 5066}
+    - Class: 114
+      Script: {instanceID: 5488}
+    - Class: 114
+      Script: {instanceID: 36266}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,41 +221,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/SampleScene.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1894}
-    - Class: 114
-      Script: {instanceID: 2320}
-    - Class: 114
-      Script: {instanceID: 5064}
-    - Class: 114
-      Script: {instanceID: 5486}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -381,13 +357,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 2f3ec8ce0fc2e24df9305b8b05d8bf0d
+      Hash: 6cca85d432e88487574592996f072eca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ControlCharacters2
   - hash:
       serializedVersion: 2
-      Hash: 3ce0ec3dabcfe9bd8392ff09295b4504
+      Hash: f5c55cf6411440e21da66cab080b189c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ControlCharacters
@@ -451,6 +427,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: a19e9433efafd0a0e39d222aef0af2ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OptionsMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -717,7 +699,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 3ce0ec3dabcfe9bd8392ff09295b4504
+      Hash: f5c55cf6411440e21da66cab080b189c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player2Control
@@ -843,25 +825,36 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 3325646596891ecd1cd56f9ea6cf37a1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Make2Appear
-  - hash:
-      serializedVersion: 2
       Hash: 762a30c8d779b11af16ed9ce1f2d32fa
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 95467782543a3bbb5e6beb931f8494e3
+      Hash: 85fd69ab1b84a976c5a6b5a120bc907e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AllElements
+  - hash:
+      serializedVersion: 2
+      Hash: a46c7572c6fb6a6bc7bb230ba7952553
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DummyHit
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LightAttack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TatsuAttack
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/MainMenu.unity
-  - Assets/Scenes/DemoLevel.unity
-  playerPath: C:/Users/snadl/Downloads/school/Semester 4/GameDev/BeegProject/FightGame/FightGame.exe
+  - Assets/Scenes/IntroToFighting.unity
+  playerPath: C:/Users/carlos/Documents/GitHub/FightingGameProject/Completed Builds/OutClassed.exe
