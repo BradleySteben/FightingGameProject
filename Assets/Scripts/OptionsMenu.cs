@@ -51,14 +51,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void ChangeVolume()
     {
-        //if (mute.isOn)
-        //{
-           // AudioListener.volume = 0;
-        //}
-        //else
-        //{
-            //AudioListener.volume = volumeSlider.value;
-        //}
+            AudioListener.volume = volumeSlider.value;
+        
     }
 
 }
